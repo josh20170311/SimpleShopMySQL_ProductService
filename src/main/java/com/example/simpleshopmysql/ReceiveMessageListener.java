@@ -17,7 +17,7 @@ public class ReceiveMessageListener {
 	 * 監聽Queue中是否有資料，若有資料則進行消費。
 	 * @param product
 	 */
-	@RabbitListener(queues={"tpu.queue"})
+	@RabbitListener(queues={"put_product"})
 	public Product receive(Product product) {
 		try {
 			Product newProduct = productService.addProduct(product);
